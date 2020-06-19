@@ -8,6 +8,7 @@ case $1 in
     server)
         $JMETER_HOME/bin/jmeter-server \
             -Dserver.rmi.localport=50000 \
+            -Jserver.rmi.ssl.disable=true \
             -Dserver_port=1099
         ;;
     *)

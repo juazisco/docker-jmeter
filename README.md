@@ -19,7 +19,8 @@ The [Dockerfile](https://github.com/pedrocesar-ti/distributed-jmeter-docker/blob
 - 3.1
 - 3.2
 - 4.0
-- 5.0 
+- 5.0
+- 5.3
 
 ## Running Master or Server
 ### Master
@@ -47,6 +48,7 @@ Another good point to mention here is that we suggest that you use volumes to sh
 ```sh
 jmeter -n -t script.jmx -R server1,server2,…
 ``` 
+Copy your data files in data_test volume
 
 You can also use this [docker-compose](https://github.com/pedrocesar-ti/distributed-jmeter-docker/blob/master/local/docker-compose.yml) to deploy in a Docker Swarm cluster defining better techniques to scale the number of replicas you want for each service and add all power of the internal discovery service.
 
